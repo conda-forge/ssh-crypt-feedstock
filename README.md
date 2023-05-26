@@ -1,11 +1,11 @@
-About ssh-crypt
-===============
+About ssh-crypt-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ssh-crypt-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/ssh-crypt/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ssh-crypt-feedstock/blob/main/LICENSE.txt)
 
 Summary: ssh-crypt is a tool to encrypt/decrypt data using your ssh key from ssh-agent
 
