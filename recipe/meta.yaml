@@ -1,13 +1,13 @@
 {% set name = "ssh-crypt" %}
-{% set version = "1.1.9" %}
+{% set version = "1.1.11" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ssh-crypt-{{ version }}.tar.gz
-  sha256: 63e2e84ff658d45aa942c2ca830094efe7c0218724226ebd3085fdbcaa51e96f
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 268af375cf2da0ff4a78abe87a89a012049cb30850940dc56e229268192f3917
 
 build:
   number: 0
