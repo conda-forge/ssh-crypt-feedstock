@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 268af375cf2da0ff4a78abe87a89a012049cb30850940dc56e229268192f3917
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
   entry_points:
@@ -18,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - paramiko
     - cryptography
 
@@ -31,6 +31,7 @@ test:
   requires:
     - paramiko
     - cryptography
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/ssh-crypt/
